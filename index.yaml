@@ -5,7 +5,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-08T15:08:07.539498264+01:00"
+    created: "2023-02-10T10:56:44.307124235+01:00"
     description: A Helm chart for Kubernetes
     digest: 9b98d2c053e343d6d938c506430e760c4cc86b4850e52d4086cf08b9532dac0d
     name: hypershift-template
@@ -13,4 +13,15 @@ entries:
     urls:
     - hypershift-template-0.0.2.tgz
     version: 0.0.2
-generated: "2023-02-08T15:08:07.539040382+01:00"
+  rosa-test:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-02-10T10:56:44.307296385+01:00"
+    description: ROSA template
+    digest: 9a484d96b6b04c9602ed94d365ab8d4e8b8bdbbf2d28a23d328446d6b5a45dbf
+    name: rosa-test
+    type: application
+    urls:
+    - rosa-test-0.0.18.tgz
+    version: 0.0.18
+generated: "2023-02-10T10:56:44.306622791+01:00"
