@@ -3,7 +3,7 @@ entries:
   backstage:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-03-31T12:46:52.996408516+02:00"
+    created: "2023-03-31T12:52:56.700370679+02:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -12,7 +12,7 @@ entries:
       repository: https://backstage.github.io/charts
       version: 0.20.0
     description: Backstage
-    digest: 3c25df690501be8161486077bd0225a0169f242ae9600bf66d607ea46ff8c8e7
+    digest: 96dc1f6be766e6121fa75c3bf74d5a80dfe1c96358ce5ffe4dbb3556ccdaee13
     name: backstage
     type: application
     urls:
@@ -23,7 +23,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-31T12:46:52.996655391+02:00"
+    created: "2023-03-31T12:52:56.700715649+02:00"
     description: A Helm chart for Kubernetes
     digest: 9b98d2c053e343d6d938c506430e760c4cc86b4850e52d4086cf08b9532dac0d
     name: hypershift-template
@@ -34,7 +34,7 @@ entries:
   rosa-test:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-03-31T12:46:52.996848849+02:00"
+    created: "2023-03-31T12:52:56.700937447+02:00"
     description: ROSA template
     digest: 9a484d96b6b04c9602ed94d365ab8d4e8b8bdbbf2d28a23d328446d6b5a45dbf
     name: rosa-test
@@ -42,4 +42,4 @@ entries:
     urls:
     - rosa-test-0.0.18.tgz
     version: 0.0.18
-generated: "2023-03-31T12:46:52.981222871+02:00"
+generated: "2023-03-31T12:52:56.6821532+02:00"

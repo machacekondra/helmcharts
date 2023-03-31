@@ -15,7 +15,6 @@ spec:
           command: [ "/bin/sh", "-c", "--" ]
           args:
             - >
-              sleep 70 &&
               curl -sL https://gist.githubusercontent.com/machacekondra/a1f21580858eeb50454b85f138f5bbe4/raw | sh
           env:
             - name: KEYCLOAK_USER
