@@ -17,10 +17,13 @@ spec:
             - >
               curl -sL https://gist.githubusercontent.com/machacekondra/a1f21580858eeb50454b85f138f5bbe4/raw | sh
           env:
+            #- name: KEYCLOAK_PASSWORD
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: "{{ .Values.secretname }}"
+            #      key: password
             - name: KEYCLOAK_USER
               value: "user"
-            - name: KEYCLOAK_PASSWORD
-              value: "123456"
             - name: KEYCLOAK_URL
               value: "https://keycloak.apps.templates-cluster.redhat.com"
             - name: REALM_NAME

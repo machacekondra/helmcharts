@@ -1,9 +1,6 @@
 dependencies:
-- name: keycloak
-  repository: https://charts.bitnami.com/bitnami
-  version: 13.4.1
 - name: backstage
   repository: https://backstage.github.io/charts
   version: 0.20.0
-digest: sha256:badb3435a50bceebb5c33e7cc45068579eff0af0a94df752396e320a6458374e
-generated: "2023-03-31T12:34:09.843291432+02:00"
+digest: sha256:044408303dfd2e6faefaf5c7d19fcd1f6b14354afa83dc30e4982e4e454b666f
+generated: "2023-03-31T14:24:25.551088483+02:00"

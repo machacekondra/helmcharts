@@ -1,6 +1,6 @@
 apiVersion: v2
-name: backstage
-description: Backstage
+name: mypod
+description: A Helm chart for Kubernetes
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -21,12 +21,4 @@ version: 0.1.0
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "1.0.0"
-
-dependencies:
-  #- name: keycloak
-  #  version: "13.4.1"
-  #  repository: "https://charts.bitnami.com/bitnami"
-  - name: backstage
-    version: "0.20.0"
-    repository: "https://backstage.github.io/charts"
+appVersion: "1.16.0"

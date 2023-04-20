@@ -1,9 +1,12 @@
+domain: templates-cluster.redhat.com
+appname: {{ .Release.Name }}
+
 backstage:
   ingress:
     enabled: true
-    annotations:
-       route.openshift.io/termination: edge
-    host: backstage.apps.templates-cluster.redhat.com
+      annotations:
+         route.openshift.io/termination: edge
+      host: {{ .Values.appname }}.apps.{{ .Values.domain }}
 
   commonAnnotations:
     argocd.argoproj.io/sync-wave: "5"
@@ -16,28 +19,23 @@ backstage:
 
     extraEnvVars:
       - name: 'APP_CONFIG_app_baseUrl'
-        value: 'https://backstage.apps.templates-cluster.redhat.com'
+        value: 'https://{{ .Values.appname }}.apps.{{ .Values.domain }}'
       - name: 'APP_CONFIG_backend_baseUrl'
-        value: 'https://backstage.apps.templates-cluster.redhat.com'
+        value: 'https://{{ .Values.appname }}.apps.{{ .Values.domain }}'
       - name: 'APP_CONFIG_backend_cors_origin'
-        value: 'https://backstage.apps.templates-cluster.redhat.com'
+        value: 'https://{{ .Values.appname }}.apps.{{ .Values.domain }}'
     
     extraContainers:
       - name: oauth2-proxy
         env:
           - name: OAUTH2_PROXY_CLIENT_ID
             value: 'backstage'
-            #value: '{{ required "Keycloak Client Secret is Required" .Values.keycloak.clientId }}'
           - name: OAUTH2_PROXY_CLIENT_SECRET
-            value: 'x'
-            #value: '{{ required "Keycloak Client Secret is Required" .Values.keycloak.clientSecret }}'
+            value: ''
           - name: OAUTH2_PROXY_COOKIE_SECRET
-            #value: '{{ default (randAlpha 32 | lower | b64enc) .Values.keycloak.cookieSecret }}'
-            value: '99c5ohBdrrA04oa8DUq143EPcj24xlkW0GTuPmMOyPw='
+            value: '{{ default (randAlpha 32 | lower | b64enc) }}'
           - name: OAUTH2_PROXY_OIDC_ISSUER_URL
-            value: 'https://keycloak.apps.templates-cluster.redhat.com/realms/master'
-            #value: 'https://keycloak-keycloak.apps.templates-cluster.redhat.com/auth/realms/master'
-            # value: '{{ required "Keycloak Issuer URL is Required" .Values.keycloak.issuerUrl }}'
+            value: 'https://{{ .Values.appname }}-keycloak.apps.{{ .Values.domain }}/realms/master'
           - name: OAUTH2_PROXY_SSL_INSECURE_SKIP_VERIFY
             value: 'true'
         ports:
@@ -67,13 +65,13 @@ backstage:
    #    persistence:
    #      enabled: true
 
-keycloak:
-  service:
-    type: ClusterIP
-  auth:
-    adminPassword: "123456"
-  ingress:
-    enabled: true
-    annotations:
-       route.openshift.io/termination: edge
-    hostname: keycloak.apps.templates-cluster.redhat.com
+      #keycloak:
+      #  service:
+      #    type: ClusterIP
+      #  auth:
+      #    adminPassword: "123456"
+      #  ingress:
+      #    enabled: true
+      #    annotations:
+      #       route.openshift.io/termination: edge
+      #    hostname: keycloak.apps.templates-cluster.redhat.com
