@@ -2,6 +2,9 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+username: bXl1c2Vy
+password: bXlwYXNz
+hostname: mypod-default.apps-crc.testing
 replicaCount: 1
 
 image:
