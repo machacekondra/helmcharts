@@ -25,9 +25,11 @@ spec:
   services:
   - service: APIServer
     servicePublishingStrategy:
+      type: {{ .Values.APIPublishingStrategy }}
+      {{- if .Values.NodePortAddress  }}
       nodePort:
-        address: api.{{ .Values.baseDnsDomain }}
-      type: NodePort
+        address: {{ .Values.NodePortAddress }}
+      {{- end }}
   - service: OAuthServer
     servicePublishingStrategy:
       type: Route
