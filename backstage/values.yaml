@@ -1,13 +1,7 @@
 domain: templates-cluster.redhat.com
-appname: {{ .Release.Name }}
+appname: backstage
 
 backstage:
-  ingress:
-    enabled: true
-      annotations:
-         route.openshift.io/termination: edge
-      host: {{ .Values.appname }}.apps.{{ .Values.domain }}
-
   commonAnnotations:
     argocd.argoproj.io/sync-wave: "5"
 
@@ -50,7 +44,7 @@ backstage:
           - '--upstream=http://localhost:7007'
           - '--http-address=0.0.0.0:4180'
           - '--skip-provider-button'
-  
+
   service:
     ports:
       backend: 4180
@@ -58,20 +52,13 @@ backstage:
 
   postgresql:
     enabled: false
-   #  auth:
-   #    username: bn_backstage
-   #    database: backstage
-   #  primary:
-   #    persistence:
-   #      enabled: true
 
-      #keycloak:
-      #  service:
-      #    type: ClusterIP
-      #  auth:
-      #    adminPassword: "123456"
-      #  ingress:
-      #    enabled: true
-      #    annotations:
-      #       route.openshift.io/termination: edge
-      #    hostname: keycloak.apps.templates-cluster.redhat.com
+  keycloak:
+    postgresql:
+      enabled: false
+    service:
+      type: LoadBalancer
+    auth:
+      adminPassword: "123456"
+    ingress:
+      enabled: true
