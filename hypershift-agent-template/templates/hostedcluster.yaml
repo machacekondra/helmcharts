@@ -4,9 +4,7 @@ kind: AnsibleJob
 metadata:
   name: myjob
   annotations:
-    "helm.sh/hook": crd-install
-    "helm.sh/hook-weight": "-2"
-    "helm.sh/hook-delete-policy": hook-succeeded
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   job_template_name: {{ .Values.ansibleJobTemplate }}
   tower_auth_secret: {{ .Values.ansibleTowerSecret }}
@@ -15,6 +13,8 @@ apiVersion: hypershift.openshift.io/v1beta1
 kind: NodePool
 metadata:
   name: 'np-{{ .Release.Namespace }}-{{ .Release.Name }}'
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   clusterName: {{ .Release.Namespace }}-{{ .Release.Name }}
   replicas: 1
@@ -32,6 +32,8 @@ apiVersion: hypershift.openshift.io/v1beta1
 kind: HostedCluster
 metadata:
   name: {{ .Release.Namespace }}-{{ .Release.Name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   release:
     image: quay.io/openshift-release-dev/ocp-release:{{ .Values.ocpVersion }}-x86_64
