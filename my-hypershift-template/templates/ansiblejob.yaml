@@ -1,0 +1,9 @@
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: myjob
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+spec:
+  job_template_name: {{ .Values.ansibleJobTemplate }}
+  tower_auth_secret: {{ .Values.ansibleTowerSecret }}
