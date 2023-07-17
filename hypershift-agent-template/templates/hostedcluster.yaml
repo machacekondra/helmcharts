@@ -4,7 +4,9 @@ kind: AnsibleJob
 metadata:
   name: myjob
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": hook-succeeded
 spec:
   job_template_name: {{ .Values.ansibleJobTemplate }}
   tower_auth_secret: {{ .Values.ansibleTowerSecret }}
