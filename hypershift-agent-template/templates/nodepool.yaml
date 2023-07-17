@@ -2,6 +2,8 @@ apiVersion: hypershift.openshift.io/v1beta1
 kind: NodePool
 metadata:
   name: 'np-{{ .Release.Namespace }}-{{ .Release.Name }}'
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   clusterName: {{ .Release.Namespace }}-{{ .Release.Name }}
   replicas: 1
