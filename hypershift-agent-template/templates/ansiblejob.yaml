@@ -1,7 +1,0 @@
-apiVersion: tower.ansible.com/v1alpha1
-kind: AnsibleJob
-metadata:
-  name: myjob
-spec:
-  job_template_name: {{ .Values.ansibleJobTemplate }}
-  tower_auth_secret: {{ .Values.ansibleTowerSecret }}
