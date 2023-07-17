@@ -3,7 +3,7 @@ entries:
   backstage:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-17T09:53:19.334453996+02:00"
+    created: "2023-07-17T10:11:07.041865926+02:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -20,7 +20,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-17T09:53:19.368914385+02:00"
+    created: "2023-07-17T10:11:07.07435003+02:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -37,7 +37,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-17T09:53:19.315477758+02:00"
+    created: "2023-07-17T10:11:07.028100978+02:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -54,7 +54,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-17T09:53:19.354024691+02:00"
+    created: "2023-07-17T10:11:07.060254655+02:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -71,8 +71,18 @@ entries:
     version: 0.1.0
   hypershift-agent-template:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2023-07-17T10:11:07.042628504+02:00"
+    description: Hypershift cluster template with agent workers
+    digest: 3d2ec2c9a1fd9b2b35cbbf2ac7f20e622799241011d4c5cb3d5c657fd4d14233
+    name: hypershift-agent-template
+    type: application
+    urls:
+    - hypershift-agent-template-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     appVersion: 0.0.3
-    created: "2023-07-17T09:53:19.335577339+02:00"
+    created: "2023-07-17T10:11:07.042463412+02:00"
     description: Hypershift cluster template with agent workers
     digest: 3985ac3607c76ca0b6ee8a91138c6e382a9d0d04bdd97c7e33379eab9063cbf1
     name: hypershift-agent-template
@@ -82,7 +92,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-07-17T09:53:19.335223265+02:00"
+    created: "2023-07-17T10:11:07.042270341+02:00"
     description: Hypershift cluster template with agent workers
     digest: ff92b44aa46f2c709a85915d3029c41ff36bdacb3445494241d16318d5e239c9
     name: hypershift-agent-template
@@ -92,7 +102,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-07-17T09:53:19.334896399+02:00"
+    created: "2023-07-17T10:11:07.042089053+02:00"
     description: Hypershift cluster template with agent workers
     digest: 46f7a37a153432a23d50af4c372922b5197de7e50c03bb65c4694930966fb210
     name: hypershift-agent-template
@@ -105,7 +115,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.336743816+02:00"
+    created: "2023-07-17T10:11:07.043294202+02:00"
     description: A Helm chart for Kubernetes
     digest: aa30864a977afab0db7abe52b405dd76f89a7d2e88f2ceb23e9f23a46ed961e7
     name: hypershift-template
@@ -117,7 +127,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.336481001+02:00"
+    created: "2023-07-17T10:11:07.043129238+02:00"
     description: A Helm chart for Kubernetes
     digest: b08a943c6e14c1d89a355de0e45334e143e191a9704f1ea4c57ad70ebdfddaf4
     name: hypershift-template
@@ -129,7 +139,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.336220384+02:00"
+    created: "2023-07-17T10:11:07.042968256+02:00"
     description: A Helm chart for Kubernetes
     digest: b6836a678828da2f4f24c3fe27a561f64a8410ff5733db70336a859954d9b913
     name: hypershift-template
@@ -141,7 +151,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.335935868+02:00"
+    created: "2023-07-17T10:11:07.042806158+02:00"
     description: A Helm chart for Kubernetes
     digest: 9b98d2c053e343d6d938c506430e760c4cc86b4850e52d4086cf08b9532dac0d
     name: hypershift-template
@@ -152,7 +162,7 @@ entries:
   mypod:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.34027636+02:00"
+    created: "2023-07-17T10:11:07.046548071+02:00"
     description: A Helm chart for Kubernetes
     digest: 76059c754f62dfd91dc0b02ded2cb9338b54346426e2f8944969d67be3f7a794
     name: mypod
@@ -162,7 +172,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.339857737+02:00"
+    created: "2023-07-17T10:11:07.046227894+02:00"
     description: A Helm chart for Kubernetes
     digest: 652712f733a2c4e65142a087db41a9c37ee939ba80600009a592c068e6eda685
     name: mypod
@@ -172,7 +182,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.36945514+02:00"
+    created: "2023-07-17T10:11:07.074819516+02:00"
     description: A Helm chart for Kubernetes
     digest: 8b2efb5689f134657335950840308a97b138cdbd3d2b6c9153e9641911f79c4a
     name: mypod
@@ -182,7 +192,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.339290491+02:00"
+    created: "2023-07-17T10:11:07.045860237+02:00"
     description: A Helm chart for Kubernetes
     digest: 1b376a03d3212da80e064d423631a0895aec86c24ac797657f33a714887f3fc0
     name: mypod
@@ -192,7 +202,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.369179135+02:00"
+    created: "2023-07-17T10:11:07.07458006+02:00"
     description: A Helm chart for Kubernetes
     digest: 53a1cb2a68693fe4d88264aac0516e18f6eb6d15e76292ff7dc267cfeaf93f15
     name: mypod
@@ -202,7 +212,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.338513077+02:00"
+    created: "2023-07-17T10:11:07.044875146+02:00"
     description: A Helm chart for Kubernetes
     digest: 42d092a7ed1250084e140866e62781df04975d80a12670c8e334db235f6f1dda
     name: mypod
@@ -212,7 +222,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.338179634+02:00"
+    created: "2023-07-17T10:11:07.044257386+02:00"
     description: A Helm chart for Kubernetes
     digest: b5c6e82f96837de7053eed83dfbb9163eeeca551078b3364a5305be193bfedd4
     name: mypod
@@ -222,7 +232,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.337903797+02:00"
+    created: "2023-07-17T10:11:07.044036652+02:00"
     description: A Helm chart for Kubernetes
     digest: 64ea7fc3c558d380b355ca828384812359165e5f5bf1cde5c23f6a29e9f170eb
     name: mypod
@@ -232,7 +242,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.337635598+02:00"
+    created: "2023-07-17T10:11:07.043859369+02:00"
     description: A Helm chart for Kubernetes
     digest: 9fb526e7887b05111c00e6b365b5ce83198316346cedcbc77cf99591fd7c1018
     name: mypod
@@ -242,7 +252,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T09:53:19.337328651+02:00"
+    created: "2023-07-17T10:11:07.043652342+02:00"
     description: A Helm chart for Kubernetes
     digest: c2a8a0399b7bc699737da914b0dd51a140b78c979ec3859c85d6b43d19347499
     name: mypod
@@ -253,7 +263,7 @@ entries:
   rosa-test:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-07-17T09:53:19.340455979+02:00"
+    created: "2023-07-17T10:11:07.046703497+02:00"
     description: ROSA template
     digest: 9a484d96b6b04c9602ed94d365ab8d4e8b8bdbbf2d28a23d328446d6b5a45dbf
     name: rosa-test
@@ -261,4 +271,4 @@ entries:
     urls:
     - rosa-test-0.0.18.tgz
     version: 0.0.18
-generated: "2023-07-17T09:53:19.298534809+02:00"
+generated: "2023-07-17T10:11:07.012328505+02:00"

@@ -28,13 +28,6 @@ spec:
   - service: APIServer
     servicePublishingStrategy:
       type: LoadBalancer
-  - service: APIServer
-    servicePublishingStrategy:
-      type: {{ .Values.APIPublishingStrategy }}
-      {{- if .Values.NodePortAddress  }}
-      nodePort:
-        address: {{ .Values.NodePortAddress }}
-      {{- end }}
   - service: OAuthServer
     servicePublishingStrategy:
       type: Route
