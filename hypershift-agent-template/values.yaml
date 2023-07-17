@@ -2,3 +2,5 @@
 ocpVersion: 4.12.21
 agentNamespace: agent-infra
 baseDnsDomain: sampletemplateinstance.com
+ansibleJobTemplate: spawnmachine
+ansibleTowerSecret: ansible-tower-secret
