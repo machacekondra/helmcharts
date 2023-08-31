@@ -4,3 +4,6 @@ data:
 kind: ConfigMap
 metadata:
   name: "{{ .Release.Name }}"
+  labels:
+    clustertemplates.openshift.io/cluster: "{{ .Values.clusterName }}"
+
