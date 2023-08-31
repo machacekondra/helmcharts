@@ -1,6 +1,7 @@
 apiVersion: v1
 data:
   accountID: "{{ .Values.accountID }}"
+  region: "{{ .Values.region }}"
 kind: ConfigMap
 metadata:
   name: "{{ .Release.Name }}"

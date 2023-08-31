@@ -3,3 +3,4 @@
 # Declare variables to be passed into your templates.
 
 accountID: "465067670339"
+region: "eu-north-1"
