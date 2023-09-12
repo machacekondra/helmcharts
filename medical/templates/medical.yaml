@@ -1,0 +1,11 @@
+apiVersion: gitops.hybrid-cloud-patterns.io/v1alpha1
+kind: Pattern
+metadata:
+  name: my-pattern-sample
+  namespace: openshift-operators
+spec:
+  clusterGroupName: hub
+  gitSpec:
+    pollInterval: 180
+    targetRepo: https://github.com/machacekondra/medical-diagnosis
+    targetRevision: main
