@@ -4,14 +4,11 @@ metadata:
   name: my-pattern-sample
   namespace: openshift-operators
 spec:
+  gitOpsSpec:
+    operatorChannel: latest
+  clusterGroupName: hub
   gitSpec:
     pollInterval: 180
     multiSourceSupport: false
     targetRepo: https://github.com/machacekondra/medical-diagnosis
     targetRevision: main
-  multiSourceConfig:
-    clusterGroupChartGitRevision: main
-    clusterGroupChartVersion: 0.0.*
-    enabled: false
-    helmRepoUrl: 'https://charts.validatedpatterns.io/'
-  clusterGroupName: hub
