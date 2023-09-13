@@ -9,6 +9,5 @@ spec:
   clusterGroupName: hub
   gitSpec:
     pollInterval: 180
-    multiSourceSupport: false
     targetRepo: https://github.com/machacekondra/medical-diagnosis
     targetRevision: main
